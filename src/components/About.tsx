@@ -6,19 +6,21 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          "Where imagination meets Dev + AI to create immersive digital
-          worlds."
+          "I turn ideas into fast, intuitive web experiences — where clean code
+          meets real impact."
         </p>
         <div className="about-bio">
           <p>
-            A passionate creative professional dedicated to crafting unique
-            digital solutions. My journey began with a curiosity for how things
-            work, leading me to master the art of web development and design.
+            I'm a full-stack developer who loves building responsive,
+            user-friendly web apps from front to back. With React, Node.js, and
+            a growing curiosity for AI-driven systems, I care about clean code
+            and interfaces that feel effortless to use.
           </p>
           <p>
-            I specialize in building clean, responsive, and user-friendly
-            websites. I am constantly learning new technologies to stay ahead of
-            the curve and deliver the best possible results for my clients.
+            From debugging tricky problems to shaping a product from a blank
+            screen, I'm driven by the details that make software genuinely
+            better. Always learning, always shipping — and always up for the
+            next challenge.
           </p>
         </div>
       </div>
