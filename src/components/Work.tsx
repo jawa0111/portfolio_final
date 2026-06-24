@@ -6,6 +6,63 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
+const projects = [
+  {
+    name: "Prepr – AI Mock Interview Platform",
+    category: "AI Web App",
+    description:
+      "An AI-powered platform that runs realistic mock interviews, asks role-based questions, and delivers instant feedback to help candidates prepare. Features voice-driven interview sessions and AI-generated scoring.",
+    tools: "Next.js, TypeScript, Tailwind CSS, AI / LLM",
+    image: "/images/ai-interview.webp",
+    link: "https://ai-interview-platform-rust-alpha.vercel.app/",
+  },
+  {
+    name: "Nirvee Visa & Immigration Experts",
+    category: "Business Website",
+    description:
+      "Professional website for a visa and immigration services company, built with Astro. Features responsive design, service listings, testimonials, and contact forms.",
+    tools: "Astro, HTML, CSS, JavaScript",
+    image: "/images/visa.webp",
+    link: "https://www.nirveevisa.com/",
+  },
+  {
+    name: "Digital Marketing Website",
+    category: "Web Application",
+    description:
+      "A web application built with React and Node.js. Features include user authentication and real-time data.",
+    tools: "React, TypeScript, Tailwind CSS",
+    image: "/images/dasandco.webp",
+    link: "https://dasandco.lovable.app/",
+  },
+  {
+    name: "Job Portal Web App",
+    category: "Full-Stack App",
+    description:
+      "Full-stack job portal with separate candidate, recruiter, and admin functionality. Includes auth, job listings, applications, profile management, and admin dashboards.",
+    tools: "Next.js, React, TypeScript",
+    image: "/images/job-portal.webp",
+    link: "https://job-portal-web-vert.vercel.app/",
+  },
+  {
+    name: "Online Food Ordering",
+    category: "Web Platform",
+    description:
+      "A web-based platform that allows users to browse menus, customize meals, and place orders seamlessly.",
+    tools: "React.js, Node.js, MongoDB",
+    image: "/images/onlinefood.webp",
+    link: "https://thehoreo.vercel.app/home",
+  },
+  {
+    name: "Construction Site",
+    category: "Business Website",
+    description:
+      "A clean and responsive construction website built with modern design principles, crafted to present a professional brand identity.",
+    tools: "React.js, Node.js, MongoDB",
+    image: "/images/solidcore.webp",
+    link: "https://solidcore-lake.vercel.app/",
+  },
+];
+
 const Work = () => {
   useGSAP(() => {
   let translateX: number = 0;
@@ -53,21 +110,26 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
+                <p>{project.description}</p>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage
+                image={project.image}
+                alt={project.name}
+                link={project.link}
+              />
             </div>
           ))}
         </div>

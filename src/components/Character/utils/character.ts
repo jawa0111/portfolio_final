@@ -34,6 +34,17 @@ const setCharacter = (
                 child.castShadow = true;
                 child.receiveShadow = true;
                 mesh.frustumCulled = true;
+
+                // Give the character's body a natural skin tone. The body is the
+                // rigged (skinned) mesh; the desk/props share the same "default"
+                // material but are static, so clone before tinting to avoid
+                // recoloring the furniture too.
+                const mat = mesh.material as THREE.MeshStandardMaterial;
+                if (child.isSkinnedMesh && mat && mat.name === "default") {
+                  const tinted = mat.clone();
+                  tinted.color.set("#d8a47f");
+                  mesh.material = tinted;
+                }
               }
             });
             resolve(gltf);
