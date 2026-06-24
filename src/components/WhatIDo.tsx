@@ -105,6 +105,7 @@ const WhatIDo = () => {
                 <div className="what-tags">Express</div>
                 <div className="what-tags">Java</div>
                 <div className="what-tags">Python</div>
+                <div className="what-tags">PHP</div>
                 <div className="what-tags">SQL</div>
               </div>
               <div className="what-arrow"></div>
@@ -130,10 +131,10 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>TOOLS</h3>
-              <h4>Tools & soft skills</h4>
+              <h4>Tools I use</h4>
               <p>
-                The tools and qualities I rely on to ship quality work and
-                collaborate effectively with teams and clients.
+                The tools I rely on day to day to design, build, and ship
+                quality work.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -142,11 +143,6 @@ const WhatIDo = () => {
                 <div className="what-tags">Figma</div>
                 <div className="what-tags">Eclipse</div>
                 <div className="what-tags">Jira</div>
-                <div className="what-tags">Leadership</div>
-                <div className="what-tags">Communication</div>
-                <div className="what-tags">Problem Solving</div>
-                <div className="what-tags">Teamwork</div>
-                <div className="what-tags">Time Management</div>
               </div>
               <div className="what-arrow"></div>
             </div>
